@@ -162,6 +162,8 @@ const languageTargets = [
   { selector: ".program-card:nth-child(7) p", en: "One-on-one instruction tailored to your body and goals." },
   { selector: ".program-card:nth-child(8) h3", en: "Small-Group Lessons" },
   { selector: ".program-card:nth-child(8) p", en: "Personalized guidance in a focused small-group setting." },
+  { selector: ".program-card:nth-child(9) h3", en: "Performance & Stage Experience" },
+  { selector: ".program-card:nth-child(9) p", en: "Extending movement learned in class into repertoire and meaningful stage experience." },
   {
     selector: ".program-note p:nth-of-type(1)",
     en: "Kids, junior, adult, and pre-professional classes are guided by the same B-BALLET standard.",

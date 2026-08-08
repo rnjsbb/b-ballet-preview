@@ -38,7 +38,7 @@ body {
 }
 
 .trial-hero h1 {
-  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", Arial, sans-serif;
   font-weight: 300;
   letter-spacing: -0.045em;
 }
@@ -233,7 +233,7 @@ select:focus-visible {
 
 .trial-hero h1 {
   margin: 10px 0 16px;
-  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", Arial, sans-serif;
   font-weight: 300;
   letter-spacing: -0.045em;
   font-size: clamp(44px, 8vw, 92px);
@@ -2257,7 +2257,7 @@ body.has-scroll-assist .scroll-assist {
 body {
   background: #fff;
   color: #1f1f1f;
-  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -2283,6 +2283,7 @@ body {
 .brand {
   min-width: 0;
   justify-self: start;
+  grid-row: 1;
 }
 
 .brand-logo {
@@ -2291,6 +2292,7 @@ body {
 
 .nav {
   grid-column: 2;
+  grid-row: 1;
   justify-self: center;
   gap: clamp(24px, 3vw, 48px);
   font-size: 15px;
@@ -2323,7 +2325,11 @@ body {
 
 .nav-cta {
   position: absolute;
-  right: clamp(92px, 8vw, 132px);
+  right: clamp(124px, 10vw, 176px);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 142px;
   border: 0;
   border-radius: 0;
@@ -2335,6 +2341,7 @@ body {
 
 .language-toggle {
   grid-column: 3;
+  grid-row: 1;
   justify-self: end;
   border-color: rgba(25, 25, 25, 0.12);
   background: #fff;
@@ -2342,27 +2349,28 @@ body {
 }
 
 .hero.brand-hero {
-  min-height: 100svh;
-  padding: 142px clamp(24px, 6vw, 92px) 64px;
+  min-height: calc(100svh - 104px);
+  margin-top: 104px;
+  padding: 64px clamp(24px, 6vw, 92px);
   place-items: center;
   text-align: center;
 }
 
 .brand-hero .hero-media {
   background-color: #f7f3f1;
-  background-image: url("assets/hero-editorial-wide.png?v=type-wide-3");
-  background-position: center top;
+  background-image: url("assets/hero-editorial-reference.png?v=pomelli-match-4");
+  background-position: center;
   filter: saturate(0.82) contrast(0.96) brightness(1.04);
 }
 
 .brand-hero[data-hero="guidance"] .hero-media {
-  background-image: url("assets/hero-editorial-wide.png?v=type-wide-3");
-  background-position: center top;
+  background-image: url("assets/hero-editorial-reference.png?v=pomelli-match-4");
+  background-position: center;
 }
 
 .brand-hero[data-hero="stage"] .hero-media {
-  background-image: url("assets/hero-editorial-wide.png?v=type-wide-3");
-  background-position: center top;
+  background-image: url("assets/hero-editorial-reference.png?v=pomelli-match-4");
+  background-position: center;
 }
 
 .brand-hero .hero-shade {
@@ -2386,11 +2394,11 @@ body {
   display: grid;
   gap: 4px;
   color: #171717;
-  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
-  font-size: clamp(42px, 5.5vw, 82px);
+  font-family: "Roboto", "Noto Sans KR", Arial, sans-serif;
+  font-size: clamp(46px, 6vw, 92px);
   font-weight: 300;
-  line-height: 1.22;
-  letter-spacing: -0.045em;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
   white-space: normal;
   text-wrap: balance;
 }
@@ -2421,7 +2429,7 @@ body {
 }
 
 h2 {
-  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", Arial, sans-serif;
   font-size: clamp(38px, 5.5vw, 74px);
   font-weight: 300;
   line-height: 1.16;
@@ -2453,9 +2461,13 @@ h2 {
 }
 
 .story-lead {
-  font-size: clamp(23px, 2.4vw, 34px);
-  font-weight: 500;
-  line-height: 1.52;
+  font-size: clamp(16px, 1.45vw, 20px);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.brand-about .section-heading .text-accent {
+  color: inherit;
 }
 
 .brand-about .story-copy p:not(.story-lead) {
@@ -2463,6 +2475,33 @@ h2 {
   font-size: clamp(15px, 1.35vw, 18px);
   line-height: 1.9;
   word-break: keep-all;
+}
+
+.philosophy-values {
+  display: grid;
+  gap: 18px;
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.philosophy-values li {
+  position: relative;
+  padding-left: 28px;
+  color: #252525;
+  font-size: clamp(16px, 1.5vw, 21px);
+  font-weight: 400;
+}
+
+.philosophy-values li::before {
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  content: "";
+  background: var(--accent);
 }
 
 .philosophy-image {
@@ -2603,6 +2642,7 @@ h2 {
 }
 
 .brand-programs .program-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   border-top: 0;
 }
@@ -2743,6 +2783,19 @@ h2 {
   text-transform: uppercase;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-hero { order: 1; }
+.brand-about { order: 2; }
+.brand-programs { order: 3; }
+.brand-gallery { order: 4; }
+.faculty { order: 5; }
+.contact { order: 6; }
+.faq { order: 7; }
+
 @media (max-width: 1180px) {
   .site-header {
     grid-template-columns: minmax(190px, 1fr) auto minmax(72px, 0.25fr);
@@ -2787,6 +2840,10 @@ h2 {
     gap: 34px;
   }
 
+  .brand-programs .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .brand-about .story-principles {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2827,14 +2884,15 @@ h2 {
   }
 
   .hero.brand-hero {
-    min-height: 84svh;
-    padding: 112px 20px 52px;
+    min-height: calc(88svh - 72px);
+    margin-top: 72px;
+    padding: 48px 20px;
   }
 
   .brand-hero .hero-media,
   .brand-hero[data-hero="guidance"] .hero-media,
   .brand-hero[data-hero="stage"] .hero-media {
-    background-position: center;
+    background-position: 42% center;
   }
 
   .brand-hero .hero-shade {
