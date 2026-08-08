@@ -37,6 +37,12 @@ body {
   line-height: 1.65;
 }
 
+.trial-hero h1 {
+  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.045em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -227,7 +233,9 @@ select:focus-visible {
 
 .trial-hero h1 {
   margin: 10px 0 16px;
-  font-family: "Playfair Display", serif;
+  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.045em;
   font-size: clamp(44px, 8vw, 92px);
   line-height: 0.95;
 }
@@ -2249,6 +2257,8 @@ body.has-scroll-assist .scroll-assist {
 body {
   background: #fff;
   color: #1f1f1f;
+  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-weight: 400;
 }
 
 .site-header {
@@ -2340,19 +2350,19 @@ body {
 
 .brand-hero .hero-media {
   background-color: #f7f3f1;
-  background-image: url("assets/hero-editorial-reference.png?v=reference-photo-2");
-  background-position: center;
+  background-image: url("assets/hero-editorial-wide.png?v=type-wide-3");
+  background-position: center top;
   filter: saturate(0.82) contrast(0.96) brightness(1.04);
 }
 
 .brand-hero[data-hero="guidance"] .hero-media {
-  background-image: url("assets/hero-editorial-reference.png?v=reference-photo-2");
-  background-position: center;
+  background-image: url("assets/hero-editorial-wide.png?v=type-wide-3");
+  background-position: center top;
 }
 
 .brand-hero[data-hero="stage"] .hero-media {
-  background-image: url("assets/hero-editorial-reference.png?v=reference-photo-2");
-  background-position: center;
+  background-image: url("assets/hero-editorial-wide.png?v=type-wide-3");
+  background-position: center top;
 }
 
 .brand-hero .hero-shade {
@@ -2376,11 +2386,11 @@ body {
   display: grid;
   gap: 4px;
   color: #171717;
-  font-family: "Noto Sans KR", system-ui, sans-serif;
-  font-size: clamp(44px, 5.8vw, 88px);
+  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
+  font-size: clamp(42px, 5.5vw, 82px);
   font-weight: 300;
-  line-height: 1.18;
-  letter-spacing: -0.04em;
+  line-height: 1.22;
+  letter-spacing: -0.045em;
   white-space: normal;
   text-wrap: balance;
 }
@@ -2411,8 +2421,9 @@ body {
 }
 
 h2 {
+  font-family: "Manrope", "Noto Sans KR", system-ui, sans-serif;
   font-size: clamp(38px, 5.5vw, 74px);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.16;
   letter-spacing: -0.045em;
 }
@@ -2612,7 +2623,7 @@ h2 {
 
 .brand-programs .program-card h3 {
   font-size: clamp(21px, 1.8vw, 28px);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .brand-programs .program-card p {
@@ -2721,9 +2732,9 @@ h2 {
 }
 
 .footer strong {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(28px, 4vw, 50px);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .footer span {
