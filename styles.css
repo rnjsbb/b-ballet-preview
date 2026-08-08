@@ -2526,7 +2526,7 @@ h2 {
   height: 100%;
   min-height: 600px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   filter: saturate(0.82) contrast(0.96) brightness(1.04);
 }
 
@@ -2659,16 +2659,73 @@ h2 {
 
 .brand-programs .program-card,
 .brand-programs .program-card:nth-child(n + 5) {
-  min-height: 245px;
-  padding: clamp(24px, 2.6vw, 40px);
+  position: relative;
+  display: grid;
+  grid-template-rows: 220px 1fr;
+  min-height: 430px;
+  padding: 0;
+  overflow: hidden;
   border: 0;
   background: #fff;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
 .brand-programs .program-card:hover {
+  background: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(45, 33, 38, 0.08);
+  box-shadow: 0 22px 52px rgba(217, 79, 130, 0.2);
+}
+
+.program-image {
+  position: relative;
+  height: 220px;
+  margin: 0;
+  overflow: hidden;
+  background: #eee8e6;
+}
+
+.program-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.program-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease, filter 0.22s ease;
+}
+
+.program-card:nth-child(1) .program-image img,
+.program-card:nth-child(2) .program-image img,
+.program-card:nth-child(3) .program-image img,
+.program-card:nth-child(7) .program-image img,
+.program-card:nth-child(8) .program-image img {
+  object-position: center 30%;
+}
+
+.program-card:nth-child(6) .program-image img,
+.program-card:nth-child(9) .program-image img {
+  object-position: center 64%;
+}
+
+.program-copy {
+  padding: clamp(24px, 2.6vw, 36px);
+  transition: background 0.22s ease;
+}
+
+.program-card:hover .program-image::after {
+  opacity: 0.3;
+}
+
+.program-card:hover .program-image img {
+  filter: saturate(1.08) contrast(1.02);
+  transform: scale(1.035);
 }
 
 .brand-programs .program-card h3 {
@@ -2680,6 +2737,11 @@ h2 {
   color: #707070;
   font-size: 15px;
   line-height: 1.8;
+}
+
+.brand-programs .program-card:hover h3,
+.brand-programs .program-card:hover p {
+  color: #fff;
 }
 
 .faculty {
@@ -2730,13 +2792,16 @@ h2 {
 
 .studio-grid {
   display: grid;
-  grid-template-columns: 1.7fr 0.82fr 0.82fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   align-items: stretch;
+  width: min(1200px, 100%);
+  margin: 0 auto;
 }
 
 .studio-grid figure {
-  min-height: clamp(430px, 48vw, 680px);
+  min-height: 0;
+  aspect-ratio: 4 / 3;
   margin: 0;
   overflow: hidden;
   background: #ece9e7;
@@ -2755,11 +2820,121 @@ h2 {
 }
 
 .studio-grid .studio-main img {
-  object-position: center 54%;
+  object-position: center;
 }
 
 .contact {
-  background: #1a1a1a;
+  grid-template-columns: 1fr;
+  gap: clamp(48px, 6vw, 78px);
+  padding: clamp(88px, 10vw, 138px) clamp(20px, 6vw, 88px);
+  background: #f7f4f2;
+  color: var(--ink);
+}
+
+.contact .contact-intro {
+  width: min(820px, 100%);
+  justify-items: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.contact h2 {
+  color: var(--ink);
+}
+
+.contact .text-on-dark {
+  color: var(--accent);
+}
+
+.contact p {
+  color: #6f6669;
+}
+
+.contact-main-cta {
+  min-height: 56px;
+  width: fit-content;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-social {
+  justify-content: center;
+}
+
+.contact-social a {
+  border-color: rgba(37, 32, 34, 0.16);
+  color: #5f5659;
+  font-weight: 500;
+}
+
+.contact-panel {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  gap: 18px;
+}
+
+.contact-branch-card,
+.consult-checklist {
+  border: 1px solid rgba(37, 32, 34, 0.12);
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+
+.contact-branch-card {
+  gap: 14px;
+  padding: clamp(28px, 4vw, 46px);
+}
+
+.contact-branch-card h3 {
+  color: var(--ink);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+}
+
+.contact .branch-label {
+  color: var(--accent) !important;
+}
+
+.branch-consult-cta {
+  min-height: 52px;
+  box-shadow: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contact-details div {
+  border-color: rgba(37, 32, 34, 0.1);
+}
+
+.contact-details dt {
+  color: #8a7f82;
+}
+
+.contact-details dd {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.consult-checklist {
+  padding: 24px 28px;
+}
+
+.consult-checklist strong {
+  color: var(--ink);
+}
+
+.consult-checklist ol {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0;
+  color: #6f6669;
+  letter-spacing: 0;
+  list-style-position: inside;
 }
 
 .contact-main-cta,
@@ -3028,9 +3203,15 @@ main {
 
   .brand-programs .program-card,
   .brand-programs .program-card:nth-child(n + 5) {
+    grid-template-rows: auto 1fr;
     min-height: 0;
-    padding: 28px 24px;
+    padding: 0;
     border: 0;
+  }
+
+  .program-image {
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .director {
@@ -3044,11 +3225,24 @@ main {
   .studio-grid figure,
   .studio-grid .studio-main {
     min-height: 0;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
   }
 
   .studio-grid .studio-main {
-    aspect-ratio: 5 / 6;
+    aspect-ratio: 4 / 3;
+  }
+
+  .contact {
+    padding: 78px 18px;
+  }
+
+  .contact-panel,
+  .consult-checklist ol {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-details div {
+    grid-template-columns: 74px minmax(0, 1fr);
   }
 
   .footer {
