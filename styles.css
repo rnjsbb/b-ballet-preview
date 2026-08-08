@@ -2244,3 +2244,666 @@ body.has-scroll-assist .scroll-assist {
     display: none !important;
   }
 }
+
+/* Editorial homepage direction */
+body {
+  background: #fff;
+  color: #1f1f1f;
+}
+
+.site-header {
+  min-height: 104px;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto minmax(220px, 1fr);
+  gap: 28px;
+  padding: 16px clamp(24px, 3.5vw, 58px);
+  background: rgba(255, 255, 255, 0.97);
+  color: #191919;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.07);
+  box-shadow: none;
+  backdrop-filter: blur(18px);
+}
+
+.site-header.is-scrolled,
+.site-header.is-open {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 26px rgba(30, 20, 24, 0.06);
+}
+
+.brand {
+  min-width: 0;
+  justify-self: start;
+}
+
+.brand-logo {
+  width: clamp(172px, 15vw, 246px);
+}
+
+.nav {
+  grid-column: 2;
+  justify-self: center;
+  gap: clamp(24px, 3vw, 48px);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.nav > a:not(.nav-cta) {
+  position: relative;
+  padding: 10px 0;
+}
+
+.nav > a:not(.nav-cta)::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.nav > a:not(.nav-cta):hover::after,
+.nav > a:not(.nav-cta):focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav-cta {
+  position: absolute;
+  right: clamp(92px, 8vw, 132px);
+  min-width: 142px;
+  border: 0;
+  border-radius: 0;
+  padding: 14px 20px;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+}
+
+.language-toggle {
+  grid-column: 3;
+  justify-self: end;
+  border-color: rgba(25, 25, 25, 0.12);
+  background: #fff;
+  box-shadow: none;
+}
+
+.hero.brand-hero {
+  min-height: 100svh;
+  padding: 142px clamp(24px, 6vw, 92px) 64px;
+  place-items: center;
+  text-align: center;
+}
+
+.brand-hero .hero-media {
+  background-color: #f7f3f1;
+  background-image: url("assets/hero-crossed-pointe-teacher.png?v=editorial-1");
+  background-position: center;
+  filter: saturate(0.76) contrast(0.94) brightness(1.05);
+}
+
+.brand-hero[data-hero="guidance"] .hero-media {
+  background-image: url("assets/hero-guidance.png?v=editorial-1");
+  background-position: center;
+}
+
+.brand-hero[data-hero="stage"] .hero-media {
+  background-image: url("assets/brand-statement-detail.jpg?v=editorial-1");
+  background-position: center 42%;
+}
+
+.brand-hero .hero-shade {
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.brand-hero .hero-content {
+  width: min(100%, 1040px);
+  max-width: 1040px;
+}
+
+.brand-hero .hero-slogan {
+  margin-bottom: 24px;
+  color: #aa365e;
+  font-size: clamp(11px, 1vw, 14px);
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.brand-hero h1 {
+  display: grid;
+  gap: 4px;
+  color: #171717;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
+  font-size: clamp(42px, 6.2vw, 92px);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+.brand-hero .hero-copy {
+  margin: 28px auto 0;
+  color: rgba(23, 23, 23, 0.7);
+  font-size: clamp(13px, 1.25vw, 17px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.section {
+  padding: clamp(90px, 10vw, 150px) clamp(24px, 5vw, 76px);
+}
+
+.section-heading {
+  max-width: 1000px;
+  margin-bottom: clamp(46px, 6vw, 84px);
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+h2 {
+  font-size: clamp(38px, 5.5vw, 74px);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+}
+
+.text-accent {
+  font-weight: 400;
+}
+
+.brand-about {
+  padding-bottom: 0;
+  background: #fff;
+}
+
+.brand-about .story-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.88fr);
+  gap: clamp(46px, 8vw, 120px);
+  align-items: stretch;
+}
+
+.story-copy {
+  align-self: center;
+  padding: clamp(12px, 3vw, 44px) 0;
+}
+
+.story-lead {
+  font-size: clamp(23px, 2.4vw, 34px);
+  font-weight: 500;
+  line-height: 1.52;
+}
+
+.brand-about .story-copy p:not(.story-lead) {
+  color: #5f5f5f;
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.9;
+  word-break: keep-all;
+}
+
+.philosophy-image {
+  min-height: 600px;
+  margin: 0;
+  overflow: hidden;
+  background: #f2efed;
+}
+
+.philosophy-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.82) contrast(0.96) brightness(1.04);
+}
+
+.brand-about .story-principles {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: clamp(54px, 7vw, 96px);
+  padding: 0;
+  border: 0;
+  border-top: 1px solid rgba(25, 25, 25, 0.16);
+  border-radius: 0;
+  background: transparent;
+}
+
+.brand-about .story-principles .principles-label {
+  grid-column: 1 / -1;
+  margin: 18px 0 24px;
+}
+
+.brand-about .story-principles div {
+  grid-template-columns: 1fr;
+  gap: 12px;
+  min-height: 230px;
+  padding: 24px 28px 32px 0;
+  border-right: 1px solid rgba(25, 25, 25, 0.12);
+  border-bottom: 0;
+}
+
+.brand-about .story-principles div + div {
+  padding-left: 28px;
+}
+
+.brand-about .story-principles div:last-child {
+  border-right: 0;
+}
+
+.brand-about .story-principles strong {
+  min-height: 60px;
+  font-size: clamp(18px, 1.7vw, 24px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.brand-about .story-principles p {
+  color: #686868;
+  line-height: 1.75;
+}
+
+.brand-statement {
+  position: relative;
+  display: block;
+  width: calc(100% + 2 * clamp(24px, 5vw, 76px));
+  min-height: clamp(460px, 55vw, 720px);
+  margin: clamp(80px, 10vw, 148px) calc(-1 * clamp(24px, 5vw, 76px)) 0;
+  overflow: hidden;
+  background: #311822;
+}
+
+.brand-statement::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(25, 7, 15, 0.2), rgba(25, 7, 15, 0.64));
+}
+
+.brand-statement img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.86) contrast(1.04);
+}
+
+.brand-statement-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  padding: 40px 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.brand-statement p {
+  max-width: 960px;
+  color: #fff;
+  font-size: clamp(36px, 5vw, 76px);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.brand-statement span {
+  max-width: 680px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(15px, 1.45vw, 20px);
+  font-weight: 400;
+}
+
+.brand-programs {
+  background: #f7f7f6;
+}
+
+.brand-programs .section-heading {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.section-summary {
+  max-width: 760px;
+  margin: 26px auto 0;
+  color: #686868;
+  font-size: clamp(15px, 1.4vw, 19px);
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.brand-programs .program-grid {
+  gap: 16px;
+  border-top: 0;
+}
+
+.brand-programs .program-card,
+.brand-programs .program-card:nth-child(n + 5) {
+  min-height: 245px;
+  padding: clamp(24px, 2.6vw, 40px);
+  border: 0;
+  background: #fff;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.brand-programs .program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(45, 33, 38, 0.08);
+}
+
+.brand-programs .program-card h3 {
+  font-size: clamp(21px, 1.8vw, 28px);
+  font-weight: 600;
+}
+
+.brand-programs .program-card p {
+  color: #707070;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.faculty {
+  background: #fff;
+}
+
+.director {
+  border: 0;
+  border-radius: 0;
+  background: #1b1b1b;
+}
+
+.director-copy {
+  padding: clamp(34px, 5vw, 72px);
+}
+
+.director img {
+  max-height: 680px;
+}
+
+.teacher-branches {
+  margin-top: 18px;
+}
+
+.teacher-gallery {
+  gap: 0;
+  border-top: 1px solid rgba(25, 25, 25, 0.14);
+}
+
+.teacher-gallery article {
+  min-height: 94px;
+  border: 0;
+  border-right: 1px solid rgba(25, 25, 25, 0.12);
+  border-bottom: 1px solid rgba(25, 25, 25, 0.12);
+  border-radius: 0;
+  background: transparent;
+}
+
+.brand-gallery {
+  background: #f7f7f6;
+}
+
+.brand-gallery .section-heading {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.studio-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 0.82fr 0.82fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.studio-grid figure {
+  min-height: clamp(430px, 48vw, 680px);
+  margin: 0;
+  overflow: hidden;
+  background: #ece9e7;
+}
+
+.studio-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.84) contrast(0.96) brightness(1.03);
+  transition: transform 0.7s ease;
+}
+
+.studio-grid figure:hover img {
+  transform: scale(1.025);
+}
+
+.studio-grid .studio-main img {
+  object-position: center 54%;
+}
+
+.contact {
+  background: #1a1a1a;
+}
+
+.contact-main-cta,
+.branch-consult-cta {
+  border-radius: 0;
+}
+
+.faq {
+  background: #fff;
+}
+
+.footer {
+  min-height: 280px;
+  display: grid;
+  place-content: center;
+  gap: 12px;
+  background: #171717;
+  color: #fff;
+  text-align: center;
+}
+
+.footer strong {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 4vw, 50px);
+  font-weight: 700;
+}
+
+.footer span {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .site-header {
+    grid-template-columns: minmax(190px, 1fr) auto minmax(72px, 0.25fr);
+  }
+
+  .nav {
+    gap: 22px;
+    font-size: 14px;
+  }
+
+  .nav-cta {
+    position: static;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    display: flex;
+    min-height: 84px;
+    justify-content: space-between;
+  }
+
+  .site-header .brand {
+    margin-right: auto;
+  }
+
+  .language-toggle {
+    order: 2;
+  }
+
+  .menu-toggle {
+    order: 3;
+  }
+
+  .nav {
+    grid-column: auto;
+  }
+
+  .brand-about .story-layout {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 34px;
+  }
+
+  .brand-about .story-principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brand-about .story-principles .principles-label {
+    grid-column: 1 / -1;
+  }
+
+  .brand-about .story-principles div:nth-of-type(2) {
+    border-right: 0;
+  }
+
+  .brand-about .story-principles div:nth-of-type(n + 3) {
+    border-top: 1px solid rgba(25, 25, 25, 0.12);
+  }
+
+  .studio-grid {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .studio-grid .studio-main {
+    grid-row: span 2;
+  }
+
+  .studio-grid figure {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    min-height: 72px;
+    padding: 12px 16px;
+  }
+
+  .brand-logo {
+    width: 142px;
+  }
+
+  .hero.brand-hero {
+    min-height: 84svh;
+    padding: 112px 20px 52px;
+  }
+
+  .brand-hero .hero-media,
+  .brand-hero[data-hero="guidance"] .hero-media,
+  .brand-hero[data-hero="stage"] .hero-media {
+    background-position: center;
+  }
+
+  .brand-hero .hero-shade {
+    background: rgba(255, 255, 255, 0.56);
+  }
+
+  .brand-hero h1 {
+    font-size: clamp(38px, 12vw, 58px);
+    line-height: 1.2;
+  }
+
+  .section {
+    padding: 78px 18px;
+  }
+
+  h2 {
+    font-size: clamp(34px, 10.5vw, 48px);
+  }
+
+  .brand-about {
+    padding-bottom: 0;
+  }
+
+  .brand-about .story-layout,
+  .brand-about .story-principles,
+  .studio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-image,
+  .philosophy-image img {
+    min-height: 460px;
+  }
+
+  .brand-about .story-principles div,
+  .brand-about .story-principles div + div {
+    min-height: 0;
+    padding: 24px 0;
+    border-right: 0;
+    border-top: 1px solid rgba(25, 25, 25, 0.12);
+  }
+
+  .brand-about .story-principles div:first-of-type {
+    border-top: 0;
+  }
+
+  .brand-statement {
+    width: calc(100% + 36px);
+    min-height: 520px;
+    margin-right: -18px;
+    margin-left: -18px;
+  }
+
+  .brand-programs .program-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .brand-programs .program-card,
+  .brand-programs .program-card:nth-child(n + 5) {
+    min-height: 0;
+    padding: 28px 24px;
+    border: 0;
+  }
+
+  .director {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-grid .studio-main {
+    grid-row: auto;
+  }
+
+  .studio-grid figure,
+  .studio-grid .studio-main {
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+  }
+
+  .studio-grid .studio-main {
+    aspect-ratio: 5 / 6;
+  }
+
+  .footer {
+    min-height: 230px;
+  }
+}
