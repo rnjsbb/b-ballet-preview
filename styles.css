@@ -1702,6 +1702,16 @@ body.has-scroll-assist .scroll-assist {
   font-size: clamp(50px, 6vw, 88px);
 }
 
+.hero-support {
+  max-width: 760px;
+  margin: 34px auto 0;
+  color: rgba(35, 35, 35, 0.62);
+  font-size: clamp(15px, 1.45vw, 20px);
+  font-weight: 300;
+  line-height: 1.85;
+  word-break: keep-all;
+}
+
 .brand-hero .hero-copy {
   max-width: 620px;
   color: rgba(69, 41, 49, 0.78);
@@ -2783,6 +2793,60 @@ h2 {
   text-transform: uppercase;
 }
 
+.trial-invite {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  padding: clamp(72px, 8vw, 116px) clamp(24px, 7vw, 120px);
+  background: #fff;
+  text-align: center;
+}
+
+.trial-invite h2 {
+  margin: 0;
+  color: #202020;
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.trial-invite p {
+  max-width: 1120px;
+  margin: 0;
+  color: #747474;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 300;
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+.trial-invite a {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 13px 24px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+}
+
+.silk-divider {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #f7e9e6;
+  aspect-ratio: 4.56 / 1;
+}
+
+.silk-divider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -2791,10 +2855,12 @@ main {
 .brand-hero { order: 1; }
 .brand-about { order: 2; }
 .brand-programs { order: 3; }
-.brand-gallery { order: 4; }
-.faculty { order: 5; }
-.contact { order: 6; }
-.faq { order: 7; }
+.trial-invite { order: 4; }
+.silk-divider { order: 5; }
+.brand-gallery { order: 6; }
+.faculty { order: 7; }
+.contact { order: 8; }
+.faq { order: 9; }
 
 @media (max-width: 1180px) {
   .site-header {
@@ -2902,6 +2968,15 @@ main {
   .brand-hero h1 {
     font-size: clamp(38px, 12vw, 58px);
     line-height: 1.2;
+  }
+
+  .hero-support br {
+    display: none;
+  }
+
+  .silk-divider {
+    min-height: 180px;
+    aspect-ratio: 2.4 / 1;
   }
 
   .section {

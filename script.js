@@ -109,6 +109,7 @@ const languageTargets = [
   { selector: ".nav a[href='#contact']", en: "Locations" },
   { selector: ".nav .nav-cta", en: "Book a Trial" },
   { selector: ".brand-headline", en: "<span>LOVE YOUR BODY.</span><span>BE BALLET.</span>" },
+  { selector: ".hero-support", en: "A premium educational space prioritizing the internal experience and physical health of the dancer, bridging the gap between casual hobby and professional training." },
   { selector: ".hero-actions .button.primary", en: "Book a Trial Class" },
   { selector: ".hero-actions .button.ghost", en: "Kakao Inquiry by Branch" },
   { selector: ".brand-about .section-heading .eyebrow", en: "Our Philosophy" },
@@ -164,6 +165,9 @@ const languageTargets = [
   { selector: ".program-card:nth-child(8) p", en: "Personalized guidance in a focused small-group setting." },
   { selector: ".program-card:nth-child(9) h3", en: "Performance & Stage Experience" },
   { selector: ".program-card:nth-child(9) p", en: "Extending movement learned in class into repertoire and meaningful stage experience." },
+  { selector: ".trial-invite h2", en: "Interested in joining?" },
+  { selector: ".trial-invite p", en: "We offer Trial Classes providing consultation and introductory sessions for new students to experience a class before full registration." },
+  { selector: ".trial-invite a", en: "Book a Trial Class" },
   {
     selector: ".program-note p:nth-of-type(1)",
     en: "Kids, junior, adult, and pre-professional classes are guided by the same B-BALLET standard.",
