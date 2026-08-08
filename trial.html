@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B-BALLET | 체험수업 상담 신청</title>
+    <meta name="description" content="비발레 체험수업 상담을 위한 기본 정보를 남기고 카카오 채널로 문의를 연결합니다." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=hero-rotation-3" />
+  </head>
+  <body class="trial-page">
+    <header class="trial-header" data-header>
+      <a class="brand" href="index.html#top" aria-label="B-BALLET home">
+        <img class="brand-logo" src="assets/bballet-logo.png" alt="B-BALLET 비발레" />
+      </a>
+      <div class="language-toggle" aria-label="Language">
+        <button class="is-active" type="button" data-lang-choice="ko" aria-pressed="true">KO</button>
+        <button type="button" data-lang-choice="en" aria-pressed="false">EN</button>
+      </div>
+      <nav class="trial-nav" aria-label="체험수업 상담">
+        <a href="index.html#contact">지점 문의</a>
+        <a class="nav-cta" href="index.html#top">홈으로</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="trial-hero">
+        <div>
+          <p class="eyebrow">Trial Class</p>
+          <h1>체험수업 상담 신청</h1>
+          <p>
+            원하시는 지점과 수업 방향을 남겨주시면 상담 내용이 카카오톡으로 보내기 좋게 정리됩니다.
+            마지막에 열리는 카카오 채널 채팅창에 내용을 붙여넣어 전송해 주세요.
+            체험 가능 일정, 접수, 납부, 등록 안내는 상담 후 개별로 안내드립니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="trial-form-section" aria-label="체험수업 상담 신청서">
+        <form class="trial-form" data-trial-form>
+          <div class="trial-grid">
+            <label>
+              <span>이름</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              <span>연락처</span>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="010-0000-0000" required />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>희망 지점</legend>
+            <div class="trial-option-grid">
+              <label><input type="radio" name="branch" value="성남점" checked /> 성남점</label>
+              <label><input type="radio" name="branch" value="송파점" /> 송파점</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>희망 수업</legend>
+            <div class="trial-option-grid">
+              <label><input type="radio" name="program" value="유아" /> 유아</label>
+              <label><input type="radio" name="program" value="초등" /> 초등</label>
+              <label><input type="radio" name="program" value="전공/입시" /> 전공/입시</label>
+              <label><input type="radio" name="program" value="성인 기초반" checked /> 성인 기초반</label>
+              <label><input type="radio" name="program" value="성인 0.5반" /> 성인 0.5반</label>
+              <label><input type="radio" name="program" value="성인 레벨 1" /> 성인 레벨 1</label>
+              <label><input type="radio" name="program" value="센터 집중반" /> 센터 집중반</label>
+              <label><input type="radio" name="program" value="성인 레벨 2" /> 성인 레벨 2</label>
+              <label><input type="radio" name="program" value="토슈즈" /> 토슈즈</label>
+              <label><input type="radio" name="program" value="작품반" /> 작품반</label>
+              <label><input type="radio" name="program" value="개인레슨" /> 개인레슨</label>
+              <label><input type="radio" name="program" value="소그룹 레슨" /> 소그룹 레슨</label>
+            </div>
+          </fieldset>
+
+          <div class="trial-grid">
+            <label>
+              <span>희망 요일/시간</span>
+              <input name="time" type="text" placeholder="예: 평일 저녁, 토요일 오전" />
+            </label>
+            <label>
+              <span>발레 경험</span>
+              <select name="experience">
+                <option value="처음입니다">처음입니다</option>
+                <option value="조금 배워봤습니다">조금 배워봤습니다</option>
+                <option value="1년 이상 경험이 있습니다">1년 이상 경험이 있습니다</option>
+                <option value="전공/입시 경험이 있습니다">전공/입시 경험이 있습니다</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>문의 내용</span>
+            <textarea name="memo" rows="5" placeholder="궁금한 점이나 상담받고 싶은 내용을 적어주세요."></textarea>
+          </label>
+
+          <button class="trial-submit" type="submit">카카오톡으로 상담 내용 보내기</button>
+          <p class="trial-help">
+            버튼을 누르면 상담 내용이 정리되고, 선택한 지점의 카카오 채널이 열립니다. 상담 후 체험 일정과 등록 절차를 안내드립니다.
+          </p>
+        </form>
+
+        <aside class="trial-result" data-trial-result hidden>
+          <p class="eyebrow">Message</p>
+          <h2 data-trial-result-title>상담 내용이 정리되었습니다.</h2>
+          <p data-trial-copy-note>아래 내용을 복사해 카카오 채널 채팅창에 붙여넣어 전송해 주세요.</p>
+          <textarea data-trial-message rows="10" readonly></textarea>
+          <div class="trial-actions">
+            <button type="button" data-copy-trial-message>내용 다시 복사</button>
+            <a href="https://pf.kakao.com/_ZPbxmG" target="_blank" rel="noopener" data-trial-kakao>카카오 채널 열기</a>
+            <a href="mailto:b-ballet@naver.com" data-trial-email>이메일로 보내기</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script src="script.js?v=language-full-11"></script>
+  </body>
+</html>
