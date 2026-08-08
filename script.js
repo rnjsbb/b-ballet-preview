@@ -108,27 +108,25 @@ const languageTargets = [
   { selector: ".nav a[href='#gallery']", en: "Studio" },
   { selector: ".nav a[href='#contact']", en: "Locations" },
   { selector: ".nav .nav-cta", en: "Book a Trial" },
-  { selector: ".hero-slogan", en: "B-BALLET · SEONGNAM & SONGPA" },
-  { selector: ".brand-headline", en: "<span>UNDERSTAND YOUR BODY.</span><span>FIND YOUR BALLET.</span>" },
-  { selector: ".hero-copy", en: "LOVE YOUR BODY. BE BALLET." },
+  { selector: ".brand-headline", en: "<span>LOVE YOUR BODY.</span><span>BE BALLET.</span>" },
   { selector: ".hero-actions .button.primary", en: "Book a Trial Class" },
   { selector: ".hero-actions .button.ghost", en: "Kakao Inquiry by Branch" },
   { selector: ".brand-about .section-heading .eyebrow", en: "Our Philosophy" },
   {
     selector: ".brand-about .section-heading h2",
-    en: 'Awareness over technique.<br /><span class="text-accent">Process over results.</span>',
+    en: 'A Philosophical<br /><span class="text-accent">Cultural Movement</span>',
   },
   {
     selector: ".brand-about .story-lead",
-    en: "At B-BALLET, ballet is more than learning a sequence of movements.",
+    en: "B-BALLET positions itself as a premium educational space that prioritizes the internal experience and physical health of the dancer over mere technical speed, bridging the gap between casual hobby and professional training through expert-led instruction.",
   },
   {
     selector: ".brand-about .story-copy p:nth-of-type(2)",
-    en: "We care less about how quickly someone improves and more about the awareness and attitude they develop through movement. Students learn to sense the body, understand healthy alignment, and discover their own expression.",
+    en: "Whether you are pursuing ballet as a hobby or a professional career, we help our students find balance and beauty through movement.",
   },
   {
     selector: ".brand-about .story-copy p:nth-of-type(3)",
-    en: "From children to adults and from recreational classes to pre-professional training, every goal is different, but the essence of good education remains the same: respect the basics and support growth that can last.",
+    en: "From children to adults, every student is guided with professional care and respect for the body.",
   },
   { selector: ".principles-label", en: "B-BALLET VALUES" },
   { selector: ".story-principles div:nth-of-type(1) p", en: "Understand how the body moves and feels." },
@@ -141,13 +139,13 @@ const languageTargets = [
   },
   {
     selector: ".brand-statement span",
-    en: "Ballet that respects every possibility, from recreational practice to professional training.",
+    en: "Bridging the gap between casual hobby and professional training.",
   },
   {
     selector: ".brand-programs .section-heading h2",
-    en: 'Professional training<br /><span class="text-accent">for every stage.</span>',
+    en: "Specialized Training",
   },
-  { selector: ".brand-programs .section-summary", en: "Thoughtful guidance for children and adults, from recreational classes to pre-professional training, at our Seongnam and Songpa studios." },
+  { selector: ".brand-programs .section-summary", en: "Offering specialized training for toddlers, students, and adults at our Seongnam and Songpa locations." },
   { selector: ".program-card:nth-child(1) h3", en: "Kids Ballet" },
   { selector: ".program-card:nth-child(1) p", en: "A playful introduction to body awareness, focus, and classroom habits." },
   { selector: ".program-card:nth-child(2) h3", en: "Junior Ballet" },
@@ -218,7 +216,7 @@ const languageTargets = [
   { selector: ".brand-gallery .eyebrow", en: "The Studio" },
   {
     selector: ".brand-gallery .section-heading h2",
-    en: 'A space for light, movement,<br /><span class="text-accent">and focused practice.</span>',
+    en: "Ethereal &amp; Disciplined",
   },
   { selector: ".mobile-quick-actions a[href='#programs']", en: "Classes" },
   { selector: ".mobile-quick-actions a[href='#contact']", en: "Contact" },
@@ -320,6 +318,7 @@ const languageAttributeTargets = [
   { selector: "img[src='assets/brand-statement-detail.jpg']", attribute: "alt", en: "B-BALLET barre and movement" },
   { selector: "img[src='assets/director-kwon-bobin.jpg']", attribute: "alt", en: "Director Kwon Bobin" },
   { selector: "img[src='assets/gallery-kids-barre-guidance.jpg']", attribute: "alt", en: "Children's barre instruction at B-BALLET" },
+  { selector: "img[src='assets/philosophy-reference.png']", attribute: "alt", en: "Young ballet student practicing pointe at B-BALLET" },
   { selector: "img[src='assets/brand-studio-empty.jpg']", attribute: "alt", en: "Sunlit B-BALLET studio" },
   { selector: "img[src='assets/brand-hero-performance-wide.jpg']", attribute: "alt", en: "B-BALLET stage performance" },
   { selector: "img[src='assets/brand-gallery-kids.jpg']", attribute: "alt", en: "Children's ballet class at B-BALLET" },
@@ -619,7 +618,7 @@ if (hero && heroChoices.length > 0) {
   });
 }
 
-if (hero && heroChoices.length === 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (hero && heroChoices.length === 0 && !hero.hasAttribute("data-hero-static") && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const heroSequence = ["experience", "guidance", "stage"];
   let heroIndex = Math.max(0, heroSequence.indexOf(hero.dataset.hero));
 

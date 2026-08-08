@@ -2340,23 +2340,23 @@ body {
 
 .brand-hero .hero-media {
   background-color: #f7f3f1;
-  background-image: url("assets/hero-crossed-pointe-teacher.png?v=editorial-1");
+  background-image: url("assets/hero-editorial-reference.png?v=reference-photo-2");
   background-position: center;
-  filter: saturate(0.76) contrast(0.94) brightness(1.05);
+  filter: saturate(0.82) contrast(0.96) brightness(1.04);
 }
 
 .brand-hero[data-hero="guidance"] .hero-media {
-  background-image: url("assets/hero-guidance.png?v=editorial-1");
+  background-image: url("assets/hero-editorial-reference.png?v=reference-photo-2");
   background-position: center;
 }
 
 .brand-hero[data-hero="stage"] .hero-media {
-  background-image: url("assets/brand-statement-detail.jpg?v=editorial-1");
-  background-position: center 42%;
+  background-image: url("assets/hero-editorial-reference.png?v=reference-photo-2");
+  background-position: center;
 }
 
 .brand-hero .hero-shade {
-  background: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .brand-hero .hero-content {
@@ -2377,10 +2377,10 @@ body {
   gap: 4px;
   color: #171717;
   font-family: "Noto Sans KR", system-ui, sans-serif;
-  font-size: clamp(42px, 6.2vw, 92px);
-  font-weight: 400;
-  line-height: 1.14;
-  letter-spacing: -0.055em;
+  font-size: clamp(44px, 5.8vw, 88px);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
   white-space: normal;
   text-wrap: balance;
 }
@@ -2427,14 +2427,18 @@ h2 {
 }
 
 .brand-about .story-layout {
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.88fr);
-  gap: clamp(46px, 8vw, 120px);
+  grid-template-columns: minmax(0, 1.06fr) minmax(420px, 0.94fr);
+  gap: clamp(42px, 6vw, 94px);
   align-items: stretch;
 }
 
 .story-copy {
   align-self: center;
   padding: clamp(12px, 3vw, 44px) 0;
+}
+
+.brand-about .story-copy .section-heading {
+  margin-bottom: clamp(34px, 4vw, 54px);
 }
 
 .story-lead {
@@ -2462,7 +2466,7 @@ h2 {
   height: 100%;
   min-height: 600px;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   filter: saturate(0.82) contrast(0.96) brightness(1.04);
 }
 
