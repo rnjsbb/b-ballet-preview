@@ -460,7 +460,18 @@ h1,
 h2,
 h3,
 p {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 h1 {
@@ -1298,18 +1309,28 @@ h3 {
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 0;
   border-top: 1px solid rgba(116, 88, 95, 0.18);
 }
 
 .faq-grid article {
+  grid-column: span 2;
   display: grid;
   align-content: start;
   gap: 12px;
   min-height: 220px;
   border-right: 1px solid rgba(116, 88, 95, 0.18);
   padding: 26px 20px;
+}
+
+.faq-grid article:nth-child(3) {
+  border-right: 0;
+}
+
+.faq-grid article:nth-child(n + 4) {
+  grid-column: span 3;
+  border-top: 1px solid rgba(116, 88, 95, 0.18);
 }
 
 .faq-grid article:last-child {
@@ -2127,6 +2148,7 @@ body.has-scroll-assist .scroll-assist {
   }
 
   .faq-grid article {
+    grid-column: auto;
     min-height: 0;
     border-right: 0;
     border-bottom: 1px solid rgba(116, 88, 95, 0.18);
@@ -2134,6 +2156,10 @@ body.has-scroll-assist .scroll-assist {
 
   .faq-grid article:last-child {
     border-bottom: 0;
+  }
+
+  .faq-grid article:nth-child(n + 4) {
+    grid-column: auto;
   }
 }
 
@@ -2924,7 +2950,11 @@ h2 {
 }
 
 .studio-grid .studio-main img {
-  object-position: center;
+  object-position: center 58%;
+}
+
+.studio-grid figure:nth-child(3) img {
+  object-position: center 58%;
 }
 
 .contact {
