@@ -157,12 +157,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .people { background: #f2efed; }
 .compact-heading { margin-bottom: 65px; }
-.people-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: end; }
-.director-card { display: grid; grid-template-columns: 190px 1fr; gap: 32px; align-items: end; }
-.director-card img { width: 190px; aspect-ratio: 1; object-fit: cover; filter: grayscale(1); }
-.director-card p { margin: 0 0 7px; color: var(--pink); font-size: 11px; font-weight: 600; letter-spacing: .15em; }
-.director-card h3 { margin: 0 0 10px; font-size: 25px; font-weight: 400; }
-.director-card span { display: block; color: var(--muted); font-size: 13px; }
+.people-layout { max-width: 940px; }
 .faculty-list { border-top: 1px solid #cfc8c7; }
 .faculty-list section { display: grid; grid-template-columns: 150px 1fr; gap: 26px; padding: 26px 0; border-bottom: 1px solid #cfc8c7; }
 .faculty-list h3 { margin: 0; font-size: 16px; font-weight: 500; }
@@ -312,8 +307,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .studio-grid figure, .studio-grid .studio-wide { flex: 0 0 82vw; height: auto; aspect-ratio: 4/3; scroll-snap-align: center; }
   .studio-grid figure:last-child { margin-right: 18px; }
   .people { padding-bottom: 95px; }
-  .director-card { grid-template-columns: 110px 1fr; gap: 20px; }
-  .director-card img { width: 110px; }
   .faculty-list section { grid-template-columns: 1fr; gap: 10px; }
   .contact { padding: 95px 0 75px; }
   .contact-heading { margin-bottom: 55px; }
