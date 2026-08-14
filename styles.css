@@ -44,7 +44,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero-frame:nth-child(1) { animation-delay: 0s; }
 .hero-frame:nth-child(2) { animation-delay: -12s; object-position: center 34%; }
 .hero-frame:nth-child(3) { animation-delay: -6s; object-position: center 42%; }
-.hero-overlay { background: linear-gradient(90deg, rgba(21,13,17,.42), rgba(21,13,17,.12) 55%, rgba(21,13,17,.35)), linear-gradient(0deg, rgba(20,12,16,.34), transparent 60%); }
+.hero-overlay { background: linear-gradient(90deg, rgba(21,13,17,.27), rgba(21,13,17,.05) 55%, rgba(21,13,17,.21)), linear-gradient(0deg, rgba(20,12,16,.2), transparent 60%); }
 .hero-copy { position: relative; z-index: 1; width: min(1200px, calc(100% - 80px)); text-align: center; }
 .hero h1 { margin: 60px 0 0; font-family: "Roboto", sans-serif; font-size: clamp(52px, 7.2vw, 112px); font-weight: 300; letter-spacing: -.045em; line-height: 1.02; }
 .hero h1 span { display: block; }
@@ -69,8 +69,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .philosophy-title h2 { max-width: 950px; margin: 0 0 36px; font-family: "Roboto", "Noto Sans KR", sans-serif; font-size: clamp(44px, 6vw, 84px); font-weight: 300; letter-spacing: -.045em; line-height: 1.15; word-break: keep-all; }
 .philosophy-title > p:last-child { max-width: 720px; margin: 0; color: rgba(255,255,255,.68); font-size: clamp(16px, 1.4vw, 20px); word-break: keep-all; }
 .editorial-grid { display: grid; grid-template-columns: minmax(0,1.02fr) minmax(0,.98fr); align-items: stretch; }
-.editorial-image { min-height: 740px; margin: 0; overflow: hidden; background: #eee6e4; }
-.editorial-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.editorial-image { min-height: 740px; margin: 0; overflow: hidden; display: grid; place-items: center; padding: clamp(34px, 4.5vw, 72px); background: #f3eceb; }
+.editorial-image img { width: 100%; height: 100%; object-fit: contain; object-position: center; transform: scale(.9); }
 .editorial-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(50px, 7vw, 100px); background: white; }
 .editorial-copy h2 { margin: 0 0 32px; font-family: "Roboto", "Noto Sans KR", sans-serif; font-size: clamp(36px, 4vw, 58px); font-weight: 300; letter-spacing: -.045em; line-height: 1.25; word-break: keep-all; }
 .editorial-copy > p:not(.eyebrow) { max-width: 550px; margin: 0 0 44px; color: var(--muted); font-size: 16px; word-break: keep-all; }
@@ -127,7 +127,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .program-detail-close { position: absolute; top: 22px; right: 24px; z-index: 2; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; background: rgba(35,21,28,.35); color: white; cursor: pointer; font: 300 27px/1 "Roboto", sans-serif; }
 
 .performance-banner { position: relative; min-height: 680px; overflow: hidden; display: grid; place-items: center; color: white; text-align: center; }
-.performance-banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; filter: brightness(.44); }
+.performance-banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; filter: brightness(.62); }
 .performance-banner > div { position: relative; z-index: 1; width: min(850px, calc(100% - 44px)); }
 .performance-banner h2 { margin: 0 0 28px; font-family: "Roboto", "Noto Sans KR", sans-serif; font-size: clamp(42px, 5.5vw, 76px); font-weight: 300; letter-spacing: -.04em; line-height: 1.18; }
 .performance-banner p { margin: 0; color: rgba(255,255,255,.72); font-size: 16px; }
@@ -162,7 +162,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .branch-card { padding: 55px 60px 58px 0; }
 .branch-card + .branch-card { padding-right: 0; padding-left: 60px; border-left: 1px solid rgba(255,255,255,.18); }
 .branch-media { display: grid; grid-template-columns: minmax(0,1.45fr) minmax(0,.55fr); gap: 8px; height: 280px; margin-bottom: 42px; overflow: hidden; }
-.branch-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) brightness(1.03); transition: transform .65s ease; }
+.branch-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.92) brightness(1.08); transition: transform .65s ease; }
 .branch-media img:first-child { object-position: center; }
 .branch-media img:last-child { object-position: center; }
 .branch-card:hover .branch-media img { transform: scale(1.018); }
