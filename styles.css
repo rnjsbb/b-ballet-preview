@@ -109,8 +109,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .program-card:hover b { transform: translate(3px,-3px); }
 .program-card[data-program="junior"] figure img { filter: brightness(1.1) contrast(.92); }
 .program-card[data-program="junior"]:hover figure img { filter: brightness(1.1) contrast(.92) saturate(.9); }
-.program-card[data-program="preprofessional"] figure img { object-fit: cover; object-position: center 62%; transform: scale(1.1); filter: brightness(1.15) contrast(.8) saturate(.92); }
-.program-card[data-program="preprofessional"]:hover figure img { transform: scale(1.14); filter: brightness(1.15) contrast(.8) saturate(.88); }
+.program-card[data-program="preprofessional"] figure img { object-fit: cover; object-position: center 62%; transform: scale(1.1); filter: brightness(1.12) contrast(.9) saturate(1.35); }
+.program-card[data-program="preprofessional"]:hover figure img { transform: scale(1.14); filter: brightness(1.12) contrast(.9) saturate(1.28); }
 .program-card[data-program="repertoire"] figure img { filter: brightness(1.32) contrast(.94); }
 .program-card[data-program="repertoire"]:hover figure img { filter: brightness(1.32) contrast(.94) saturate(.9); }
 .program-card[data-program="private"] figure img { object-position: center 52%; }
@@ -123,7 +123,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .program-detail > figure img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .program-detail.is-contain > figure img { object-fit: contain; }
 .program-detail[data-active-program="junior"] > figure img { filter: brightness(1.1) contrast(.92); }
-.program-detail[data-active-program="preprofessional"] > figure img { object-fit: cover; object-position: center 62%; transform: scale(1.08); filter: brightness(1.15) contrast(.8) saturate(.92); }
+.program-detail[data-active-program="preprofessional"] > figure img { object-fit: cover; object-position: center 62%; transform: scale(1.08); filter: brightness(1.12) contrast(.9) saturate(1.35); }
 .program-detail[data-active-program="repertoire"] > figure img { filter: brightness(1.32) contrast(.94); }
 .program-detail[data-active-program="private"] > figure img { object-position: center 52%; }
 .program-detail[data-active-program="smallgroup"] > figure img { object-fit: cover; object-position: center bottom; transform: scale(1.03); }
@@ -150,7 +150,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .studio-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; align-items: stretch; }
 .studio-grid figure { position: relative; height: auto; aspect-ratio: 4/3; margin: 0; overflow: hidden; background: #eee9e8; }
 .studio-grid img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .6s ease; }
-.studio-grid figure:first-child img { filter: brightness(1.14) contrast(.8) saturate(.9); }
+.studio-grid figure:first-child img { filter: brightness(1.2) contrast(.72) saturate(.88); }
 .studio-grid figure:nth-child(3) img { object-fit: cover; object-position: center bottom; }
 .studio-grid figure:hover img { transform: scale(1.02); }
 .studio-grid figcaption { position: absolute; right: auto; bottom: 16px; left: 16px; padding: 5px 9px; background: rgba(32,24,27,.52); color: white; font-size: 12px; text-shadow: 0 1px 8px rgba(0,0,0,.5); }
