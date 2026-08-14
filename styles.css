@@ -2484,6 +2484,14 @@ h2 {
   background: #fff;
 }
 
+.brand-about > .section-heading {
+  width: min(920px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  justify-items: center;
+}
+
 .brand-about .story-layout {
   grid-template-columns: minmax(0, 1.06fr) minmax(420px, 0.94fr);
   gap: clamp(42px, 6vw, 94px);
