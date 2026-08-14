@@ -163,6 +163,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .faculty-list h3 { margin: 0; font-size: 16px; font-weight: 500; }
 .faculty-list p { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; color: var(--muted); font-size: 14px; }
 
+.visit-flow { background: #fbfaf9; }
+.visit-flow .section-heading > p:last-child { max-width: 620px; margin: 22px 0 0; color: var(--muted); word-break: keep-all; }
+.visit-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); padding-left: 0; border-top: 1px solid var(--line); }
+.visit-steps li { min-height: 250px; padding: 34px 42px 32px 0; list-style: none; border-bottom: 1px solid var(--line); }
+.visit-steps li + li { padding-left: 42px; border-left: 1px solid var(--line); }
+.visit-steps span { color: var(--pink); font: 400 11px/1 "Roboto", sans-serif; letter-spacing: .14em; }
+.visit-steps h3 { margin: 48px 0 18px; font-size: 25px; font-weight: 400; }
+.visit-steps p { max-width: 300px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; word-break: keep-all; }
+
 .contact { padding: clamp(110px, 13vw, 190px) 0 100px; background: var(--plum); color: white; }
 .contact-heading { display: grid; grid-template-columns: .6fr 1.4fr; margin-bottom: 90px; }
 .contact-heading .eyebrow { grid-row: 1 / span 3; }
@@ -191,10 +200,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .contact-bottom > div { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 22px; color: rgba(255,255,255,.58); font-size: 12px; }
 
 .side-inquiry { position: fixed; right: 0; bottom: 34%; z-index: 40; display: grid; place-items: center; width: 42px; height: 124px; background: var(--pink); color: white; writing-mode: vertical-rl; font-size: 11px; font-weight: 500; letter-spacing: .12em; }
-.footer { display: grid; place-items: center; min-height: 360px; padding: 70px 30px; background: #171516; color: white; text-align: center; }
-.footer strong { font-family: "Cormorant Garamond", serif; font-size: 50px; font-weight: 500; letter-spacing: .04em; }
-.footer p { margin: 10px 0 38px; color: rgba(255,255,255,.5); font-size: 13px; }
-.footer span { color: rgba(255,255,255,.34); font-size: 11px; }
+.footer { padding: 90px 0 38px; background: #171516; color: white; }
+.footer-inner { width: min(var(--content), calc(100% - 80px)); margin: 0 auto; }
+.footer-brand { display: flex; justify-content: space-between; align-items: baseline; gap: 30px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.14); }
+.footer-brand strong { font-family: "Cormorant Garamond", serif; font-size: 50px; font-weight: 500; letter-spacing: .04em; }
+.footer-brand p { margin: 0; color: rgba(255,255,255,.5); font-size: 13px; }
+.footer-information { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px; padding: 48px 0 65px; }
+.footer-information h2 { margin: 0 0 18px; color: #f59ab5; font-size: 12px; font-weight: 500; letter-spacing: .12em; }
+.footer-information a, .footer-information p { display: block; margin: 0 0 8px; color: rgba(255,255,255,.58); font-size: 12px; line-height: 1.7; }
+.footer-information a:hover { color: white; }
+.footer-legal { display: flex; justify-content: space-between; gap: 20px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); }
+.footer-legal span { color: rgba(255,255,255,.34); font-size: 11px; }
 
 /* Trial class */
 .trial-page { min-height: 100vh; background: #f4f0ef; }
@@ -267,6 +283,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .studio-grid .studio-wide { height: auto; aspect-ratio: 16/9; }
   .people-layout { grid-template-columns: 1fr; }
   .director-card { max-width: 600px; }
+  .visit-steps li { padding-right: 25px; }
+  .visit-steps li + li { padding-left: 25px; }
   .contact-heading { gap: 0; }
   .branch-card { padding: 45px 35px 45px 0; }
   .branch-card + .branch-card { padding-left: 35px; }
@@ -308,6 +326,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .studio-grid figure:last-child { margin-right: 18px; }
   .people { padding-bottom: 95px; }
   .faculty-list section { grid-template-columns: 1fr; gap: 10px; }
+  .visit-steps { grid-template-columns: 1fr; }
+  .visit-steps li, .visit-steps li + li { min-height: 0; padding: 28px 0 32px; border-left: 0; }
+  .visit-steps h3 { margin-top: 28px; }
   .contact { padding: 95px 0 75px; }
   .contact-heading { margin-bottom: 55px; }
   .contact-heading h2 { font-size: 45px; }
@@ -318,7 +339,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .contact-bottom { flex-direction: column; align-items: flex-start; }
   .contact-bottom > div { justify-content: flex-start; }
   .side-inquiry { bottom: 20%; height: 110px; }
-  .footer { min-height: 300px; }
+  .footer { padding-top: 70px; }
+  .footer-inner { width: calc(100% - 36px); }
+  .footer-brand { display: block; }
+  .footer-brand p { margin-top: 8px; }
+  .footer-information { grid-template-columns: 1fr; gap: 34px; }
+  .footer-legal { flex-direction: column; }
   .trial-header { padding: 12px 18px; }
   .trial-header .brand { width: 140px; }
   .trial-header > .language-toggle { margin-right: 8px; }
