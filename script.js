@@ -19,7 +19,7 @@ const programDetails = {
     en: { title: "Junior Ballet", alt: "Junior ballet training at B-BALLET", lead: "Step-by-step training in ballet fundamentals and alignment, designed with growing bodies in mind.", audience: "Elementary students · Classes by level", focus: ["Alignment and balance for growing bodies", "Fundamentals at the barre and center", "Focus and musicality"] },
   },
   preprofessional: {
-    number: "PROGRAM 03", image: "assets/gallery-solo-window-arabesque.jpg", contain: true,
+    number: "PROGRAM 03", image: "assets/gallery-solo-window-arabesque.jpg", contain: false,
     ko: { title: "전공·입시", alt: "비발레 전공 입시 발레 에튀튜드", lead: "전공과 입시 목표에 맞춰 기본기, 작품, 표현력과 무대 감각을 체계적으로 지도합니다.", audience: "발레 전공 준비 · 예중·예고·대학 입시", focus: ["개인별 기초 테크닉 점검", "작품과 표현력 지도", "입시·콩쿠르·무대 준비"] },
     en: { title: "Pre-Professional", alt: "Pre-professional ballet étude at B-BALLET", lead: "Structured coaching in technique, repertoire, expression, and stage presence for each student's professional goals.", audience: "Pre-professional and audition preparation", focus: ["Individual technique assessment", "Repertoire and artistic expression", "Audition, competition, and stage preparation"] },
   },
@@ -39,12 +39,12 @@ const programDetails = {
     en: { title: "Repertoire", alt: "B-BALLET repertoire performance", lead: "Learn classical choreography while developing musicality, expression, and a more complete quality of movement.", audience: "Students interested in repertoire and choreography", focus: ["Classical choreography", "Musicality and artistic expression", "Ensemble awareness and staging"] },
   },
   private: {
-    number: "PROGRAM 07", image: "assets/hero-main-guidance.jpg", contain: false,
+    number: "PROGRAM 07", image: "assets/hero-main-guidance-private.jpg", contain: false,
     ko: { title: "개인레슨", alt: "비발레 개인레슨 지도", lead: "현재의 몸 상태와 경험, 구체적인 목표를 살펴 개인에게 필요한 내용을 1:1로 집중 지도합니다.", audience: "개인 목표와 세밀한 교정이 필요한 수강생", focus: ["개인별 자세와 움직임 분석", "목표에 맞춘 맞춤 커리큘럼", "집중적인 피드백과 교정"] },
     en: { title: "Private Lessons", alt: "Private ballet instruction at B-BALLET", lead: "Focused one-on-one instruction based on the student's current condition, experience, and individual goals.", audience: "Students seeking individual goals and detailed correction", focus: ["Personal posture and movement assessment", "A curriculum tailored to individual goals", "Focused feedback and correction"] },
   },
   smallgroup: {
-    number: "PROGRAM 08", image: "assets/gallery-trio-line.jpg", contain: true,
+    number: "PROGRAM 08", image: "assets/gallery-trio-line.jpg", contain: false,
     ko: { title: "소그룹 레슨", alt: "세 명이 함께하는 비발레 소그룹 레슨", lead: "소수 인원이 함께 배우는 집중도 높은 수업으로, 개인별 피드백과 그룹의 에너지를 함께 경험합니다.", audience: "친구·가족 또는 비슷한 목표의 소수 그룹", focus: ["소수 정원으로 세밀한 지도", "개인별 피드백과 그룹 연습", "목표와 수준에 맞춘 수업 구성"] },
     en: { title: "Small-Group Lessons", alt: "Three students in a B-BALLET small-group lesson", lead: "A focused class for a small number of students, combining individual feedback with the energy of learning together.", audience: "Friends, family, or small groups with similar goals", focus: ["Detailed instruction in a small group", "Individual feedback and group practice", "Training shaped around level and goals"] },
   },
@@ -58,6 +58,7 @@ const programDetails = {
 const renderProgramDetail = () => {
   if (!programDetail || !activeProgramKey) return;
   const program = programDetails[activeProgramKey];
+  programDetail.dataset.activeProgram = activeProgramKey;
   const language = document.documentElement.lang === "en" ? "en" : "ko";
   const content = program[language];
   programDetail.querySelector("[data-program-number]").textContent = program.number;
