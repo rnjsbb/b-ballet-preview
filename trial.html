@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=center-fix-12" />
+    <link rel="stylesheet" href="styles.css?v=renewal-1" />
   </head>
   <body class="trial-page">
     <header class="trial-header" data-header>
@@ -23,17 +23,17 @@
         <button type="button" data-lang-choice="en" aria-pressed="false">EN</button>
       </div>
       <nav class="trial-nav" aria-label="체험수업 상담">
-        <a href="index.html#contact">지점 문의</a>
-        <a class="nav-cta" href="index.html#top">홈으로</a>
+        <a href="index.html#contact" data-en="Locations">지점 문의</a>
+        <a class="nav-cta" href="index.html#top" data-en="Home">홈으로</a>
       </nav>
     </header>
 
     <main>
       <section class="trial-hero">
         <div>
-          <p class="eyebrow">체험수업</p>
-          <h1>체험수업 상담 신청</h1>
-          <p>
+          <p class="eyebrow" data-en="Trial Class">체험수업</p>
+          <h1 data-en="Book a Trial Class">체험수업 상담 신청</h1>
+          <p data-en="Tell us your preferred studio, class, and time. We will prepare your inquiry so that you can send it directly to the appropriate B-BALLET studio. Trial availability and registration details are provided after consultation.">
             희망 지점과 수업, 시간을 남겨주시면 상담 내용을 정리해 드립니다.
             정리된 내용을 선택한 지점의 카카오 채널로 보내 주세요.
             체험 가능 일정과 등록 절차는 상담 후 개별 안내합니다.
@@ -45,81 +45,81 @@
         <form class="trial-form" data-trial-form>
           <div class="trial-grid">
             <label>
-              <span>이름</span>
+              <span data-en="Name">이름</span>
               <input name="name" type="text" autocomplete="name" required />
             </label>
             <label>
-              <span>연락처</span>
-              <input name="phone" type="tel" autocomplete="tel" placeholder="010-0000-0000" required />
+              <span data-en="Phone">연락처</span>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="010-0000-0000" data-en-placeholder="Phone number" required />
             </label>
           </div>
 
           <fieldset>
-            <legend>희망 지점</legend>
+            <legend data-en="Preferred Studio">희망 지점</legend>
             <div class="trial-option-grid">
-              <label><input type="radio" name="branch" value="성남점" checked /> 성남점</label>
-              <label><input type="radio" name="branch" value="송파점" /> 송파점</label>
+              <label><input type="radio" name="branch" value="성남점" checked /><span data-en="Seongnam Studio">성남점</span></label>
+              <label><input type="radio" name="branch" value="송파점" /><span data-en="Songpa Studio">송파점</span></label>
             </div>
           </fieldset>
 
           <fieldset>
-            <legend>희망 수업</legend>
+            <legend data-en="Preferred Class">희망 수업</legend>
             <div class="trial-option-grid">
-              <label><input type="radio" name="program" value="유아" /> 유아</label>
-              <label><input type="radio" name="program" value="초등" /> 초등</label>
-              <label><input type="radio" name="program" value="전공/입시" /> 전공/입시</label>
-              <label><input type="radio" name="program" value="성인 기초반" checked /> 성인 기초반</label>
-              <label><input type="radio" name="program" value="성인 0.5반" /> 성인 0.5반</label>
-              <label><input type="radio" name="program" value="성인 레벨 1" /> 성인 레벨 1</label>
-              <label><input type="radio" name="program" value="센터 집중반" /> 센터 집중반</label>
-              <label><input type="radio" name="program" value="성인 레벨 2" /> 성인 레벨 2</label>
-              <label><input type="radio" name="program" value="토슈즈" /> 토슈즈</label>
-              <label><input type="radio" name="program" value="작품반" /> 작품반</label>
-              <label><input type="radio" name="program" value="개인레슨" /> 개인레슨</label>
-              <label><input type="radio" name="program" value="소그룹 레슨" /> 소그룹 레슨</label>
+              <label><input type="radio" name="program" value="유아" /><span data-en="Kids Ballet">유아</span></label>
+              <label><input type="radio" name="program" value="초등" /><span data-en="Junior Ballet">초등</span></label>
+              <label><input type="radio" name="program" value="전공/입시" /><span data-en="Pre-Professional">전공/입시</span></label>
+              <label><input type="radio" name="program" value="성인 기초반" checked /><span data-en="Adult Beginner">성인 기초반</span></label>
+              <label><input type="radio" name="program" value="성인 0.5반" /><span data-en="Adult Level 0.5">성인 0.5반</span></label>
+              <label><input type="radio" name="program" value="성인 레벨 1" /><span data-en="Adult Level 1">성인 레벨 1</span></label>
+              <label><input type="radio" name="program" value="센터 집중반" /><span data-en="Center Focus">센터 집중반</span></label>
+              <label><input type="radio" name="program" value="성인 레벨 2" /><span data-en="Adult Level 2">성인 레벨 2</span></label>
+              <label><input type="radio" name="program" value="토슈즈" /><span data-en="Pointe">토슈즈</span></label>
+              <label><input type="radio" name="program" value="작품반" /><span data-en="Repertoire">작품반</span></label>
+              <label><input type="radio" name="program" value="개인레슨" /><span data-en="Private Lesson">개인레슨</span></label>
+              <label><input type="radio" name="program" value="소그룹 레슨" /><span data-en="Small-Group Lesson">소그룹 레슨</span></label>
             </div>
           </fieldset>
 
           <div class="trial-grid">
             <label>
-              <span>희망 요일/시간</span>
-              <input name="time" type="text" placeholder="예: 평일 저녁, 토요일 오전" />
+              <span data-en="Preferred Day / Time">희망 요일/시간</span>
+              <input name="time" type="text" placeholder="예: 평일 저녁, 토요일 오전" data-en-placeholder="e.g. weekday evening or Saturday morning" />
             </label>
             <label>
-              <span>발레 경험</span>
+              <span data-en="Ballet Experience">발레 경험</span>
               <select name="experience">
-                <option value="처음입니다">처음입니다</option>
-                <option value="조금 배워봤습니다">조금 배워봤습니다</option>
-                <option value="1년 이상 경험이 있습니다">1년 이상 경험이 있습니다</option>
-                <option value="전공/입시 경험이 있습니다">전공/입시 경험이 있습니다</option>
+                <option value="처음입니다" data-en="This is my first time">처음입니다</option>
+                <option value="조금 배워봤습니다" data-en="I have some basic experience">조금 배워봤습니다</option>
+                <option value="1년 이상 경험이 있습니다" data-en="I have more than one year of experience">1년 이상 경험이 있습니다</option>
+                <option value="전공/입시 경험이 있습니다" data-en="I have pre-professional experience">전공/입시 경험이 있습니다</option>
               </select>
             </label>
           </div>
 
           <label>
-            <span>문의 내용</span>
-            <textarea name="memo" rows="5" placeholder="궁금한 점이나 상담받고 싶은 내용을 적어주세요."></textarea>
+            <span data-en="Message">문의 내용</span>
+            <textarea name="memo" rows="5" placeholder="궁금한 점이나 상담받고 싶은 내용을 적어주세요." data-en-placeholder="Write any questions or details you would like to discuss."></textarea>
           </label>
 
-          <button class="trial-submit" type="submit">카카오톡으로 상담 내용 보내기</button>
-          <p class="trial-help">
+          <button class="trial-submit" type="submit" data-en="Prepare Inquiry Message">카카오톡으로 상담 내용 보내기</button>
+          <p class="trial-help" data-en="After pressing the button, choose Email or Kakao Channel to send your prepared inquiry.">
             버튼을 누르면 상담 내용이 정리되고, 선택한 지점의 카카오 채널이 열립니다. 상담 후 체험 일정과 등록 절차를 안내드립니다.
           </p>
         </form>
 
         <aside class="trial-result" data-trial-result hidden>
-          <p class="eyebrow">상담 내용</p>
-          <h2 data-trial-result-title>상담 내용이 정리되었습니다.</h2>
-          <p data-trial-copy-note>아래 내용을 복사해 카카오 채널 채팅창에 붙여넣어 전송해 주세요.</p>
+          <p class="eyebrow" data-en="Your Message">상담 내용</p>
+          <h2 data-trial-result-title data-en="Your consultation message is ready.">상담 내용이 정리되었습니다.</h2>
+          <p data-trial-copy-note data-en="Copy the message below and paste it into the Kakao Channel chat.">아래 내용을 복사해 카카오 채널 채팅창에 붙여넣어 전송해 주세요.</p>
           <textarea data-trial-message rows="10" readonly></textarea>
           <div class="trial-actions">
-            <button type="button" data-copy-trial-message>내용 다시 복사</button>
-            <a href="https://pf.kakao.com/_ZPbxmG" target="_blank" rel="noopener" data-trial-kakao>카카오 채널 열기</a>
-            <a href="mailto:b-ballet@naver.com" data-trial-email>이메일로 보내기</a>
+            <button type="button" data-copy-trial-message data-en="Copy Again">내용 다시 복사</button>
+            <a href="https://pf.kakao.com/_ZPbxmG" target="_blank" rel="noopener" data-trial-kakao data-en="Open Kakao Channel">카카오 채널 열기</a>
+            <a href="mailto:b-ballet@naver.com" data-trial-email data-en="Send by Email">이메일로 보내기</a>
           </div>
         </aside>
       </section>
     </main>
-    <script src="script.js?v=center-fix-12"></script>
+    <script src="script.js?v=renewal-1"></script>
   </body>
 </html>
