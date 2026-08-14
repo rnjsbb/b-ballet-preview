@@ -52,9 +52,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero-scroll span { font-size: 17px; }
 
 @keyframes hero-cinema {
-  0%, 29% { opacity: 1; transform: scale(1.045); }
+  0%, 29% { opacity: 1; transform: scale(1.012); }
   35%, 94% { opacity: 0; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1.045); }
+  100% { opacity: 1; transform: scale(1.012); }
 }
 
 .eyebrow { margin: 0 0 22px; color: var(--pink); font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
