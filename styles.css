@@ -127,10 +127,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .program-detail-close { position: absolute; top: 22px; right: 24px; z-index: 2; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; background: rgba(35,21,28,.35); color: white; cursor: pointer; font: 300 27px/1 "Roboto", sans-serif; }
 
 .performance-banner { position: relative; min-height: 680px; overflow: hidden; display: grid; place-items: center; color: white; text-align: center; }
-.performance-banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; filter: brightness(.62); }
+.performance-banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
 .performance-banner > div { position: relative; z-index: 1; width: min(850px, calc(100% - 44px)); }
-.performance-banner h2 { margin: 0 0 28px; font-family: "Roboto", "Noto Sans KR", sans-serif; font-size: clamp(42px, 5.5vw, 76px); font-weight: 300; letter-spacing: -.04em; line-height: 1.18; }
-.performance-banner p { margin: 0; color: rgba(255,255,255,.72); font-size: 16px; }
+.performance-banner h2 { margin: 0 0 28px; font-family: "Roboto", "Noto Sans KR", sans-serif; font-size: clamp(42px, 5.5vw, 76px); font-weight: 300; letter-spacing: -.04em; line-height: 1.18; text-shadow: 0 2px 24px rgba(20,8,14,.38); }
+.performance-banner p { margin: 0; color: rgba(255,255,255,.88); font-size: 16px; text-shadow: 0 1px 12px rgba(20,8,14,.5); }
 
 .studio { background: white; }
 .studio-grid { display: grid; grid-template-columns: 1.5fr .72fr .72fr; gap: 20px; align-items: stretch; }

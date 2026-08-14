@@ -9,47 +9,47 @@ let activeProgramKey = null;
 
 const programDetails = {
   kids: {
-    number: "PROGRAM 01", image: "assets/graded/program-kids.webp", contain: false,
+    number: "PROGRAM 01", image: "assets/brand-kids-class.jpg", contain: false,
     ko: { title: "유아발레", alt: "비발레 유아발레 수업", lead: "발레를 처음 만나는 아이가 놀이와 음악 속에서 몸의 감각을 자연스럽게 발견하는 과정입니다.", audience: "발레를 처음 접하는 유아", focus: ["기초 자세와 바른 수업 태도", "리듬과 음악에 반응하는 움직임", "균형감각과 신체 인지 발달"] },
     en: { title: "Kids Ballet", alt: "Kids ballet class at B-BALLET", lead: "A joyful first encounter with ballet, helping young children discover body awareness through music and movement.", audience: "Young children beginning ballet", focus: ["Foundational posture and classroom habits", "Movement in response to rhythm and music", "Balance and body awareness"] },
   },
   junior: {
-    number: "PROGRAM 02", image: "assets/graded/program-junior.webp", contain: false,
+    number: "PROGRAM 02", image: "assets/seongnam-junior-training.jpg", contain: false,
     ko: { title: "초등발레", alt: "비발레 초등발레 수업", lead: "성장기 몸의 특성을 고려하며 발레의 기본기와 올바른 정렬을 차근차근 쌓아갑니다.", audience: "초등학생 · 단계별 수업", focus: ["성장기 몸에 맞는 정렬과 중심", "바와 센터의 기본 테크닉", "집중력과 음악성 향상"] },
     en: { title: "Junior Ballet", alt: "Junior ballet training at B-BALLET", lead: "Step-by-step training in ballet fundamentals and alignment, designed with growing bodies in mind.", audience: "Elementary students · Classes by level", focus: ["Alignment and balance for growing bodies", "Fundamentals at the barre and center", "Focus and musicality"] },
   },
   preprofessional: {
-    number: "PROGRAM 03", image: "assets/graded/program-preprofessional.webp", contain: true,
+    number: "PROGRAM 03", image: "assets/gallery-solo-window-arabesque.jpg", contain: true,
     ko: { title: "전공·입시", alt: "비발레 전공 입시 발레 에튀튜드", lead: "전공과 입시 목표에 맞춰 기본기, 작품, 표현력과 무대 감각을 체계적으로 지도합니다.", audience: "발레 전공 준비 · 예중·예고·대학 입시", focus: ["개인별 기초 테크닉 점검", "작품과 표현력 지도", "입시·콩쿠르·무대 준비"] },
     en: { title: "Pre-Professional", alt: "Pre-professional ballet étude at B-BALLET", lead: "Structured coaching in technique, repertoire, expression, and stage presence for each student's professional goals.", audience: "Pre-professional and audition preparation", focus: ["Individual technique assessment", "Repertoire and artistic expression", "Audition, competition, and stage preparation"] },
   },
   adult: {
-    number: "PROGRAM 04", image: "assets/graded/program-adult.webp", contain: false,
+    number: "PROGRAM 04", image: "assets/brand-gallery-adult-class.jpg", contain: false,
     ko: { title: "성인발레", alt: "비발레 성인발레 수업", lead: "처음 시작하는 입문자부터 단계별 수강생까지, 자신의 몸을 이해하며 오래 즐길 수 있도록 지도합니다.", audience: "성인 입문 · 기초 · 단계별 레벨", focus: ["기초 정렬과 바 워크", "유연성·근력·중심의 균형", "음악과 함께하는 움직임"] },
     en: { title: "Adult Ballet", alt: "Adult ballet class at B-BALLET", lead: "From complete beginners to continuing students, classes build understanding of the body and a lasting enjoyment of ballet.", audience: "Adult beginner · Foundation · Levels", focus: ["Foundational alignment and barre work", "A balance of mobility, strength, and control", "Movement with musicality"] },
   },
   pointe: {
-    number: "PROGRAM 05", image: "assets/graded/program-pointe.webp", contain: true,
+    number: "PROGRAM 05", image: "assets/seongnam-pointe-detail.webp", contain: true,
     ko: { title: "토슈즈", alt: "비발레 토슈즈 수업", lead: "충분한 기초를 바탕으로 발과 발목의 정렬, 중심 이동과 토슈즈에 필요한 힘을 섬세하게 익힙니다.", audience: "기초 테크닉을 갖춘 수강생 · 상담 후 참여", focus: ["발과 발목의 안전한 정렬", "토슈즈를 위한 근력과 중심", "단계적인 동작 연결"] },
     en: { title: "Pointe", alt: "Pointe training at B-BALLET", lead: "Careful training in foot and ankle alignment, weight transfer, and the strength required for pointe work.", audience: "Students with sufficient foundation · Consultation required", focus: ["Safe foot and ankle alignment", "Strength and balance for pointe", "Progressive movement combinations"] },
   },
   repertoire: {
-    number: "PROGRAM 06", image: "assets/graded/program-repertoire.webp", contain: false,
+    number: "PROGRAM 06", image: "assets/brand-gallery-performance-line.jpg", contain: false,
     ko: { title: "작품반", alt: "비발레 작품반 공연", lead: "클래식 발레 작품의 안무를 배우며 음악성, 표현력과 움직임의 완성도를 함께 높입니다.", audience: "작품과 안무를 경험하고 싶은 수강생", focus: ["클래식 작품의 안무 습득", "음악성과 예술적 표현", "그룹 호흡과 무대 구성"] },
     en: { title: "Repertoire", alt: "B-BALLET repertoire performance", lead: "Learn classical choreography while developing musicality, expression, and a more complete quality of movement.", audience: "Students interested in repertoire and choreography", focus: ["Classical choreography", "Musicality and artistic expression", "Ensemble awareness and staging"] },
   },
   private: {
-    number: "PROGRAM 07", image: "assets/graded/hero-guidance.webp", contain: false,
+    number: "PROGRAM 07", image: "assets/hero-main-guidance.jpg", contain: false,
     ko: { title: "개인레슨", alt: "비발레 개인레슨 지도", lead: "현재의 몸 상태와 경험, 구체적인 목표를 살펴 개인에게 필요한 내용을 1:1로 집중 지도합니다.", audience: "개인 목표와 세밀한 교정이 필요한 수강생", focus: ["개인별 자세와 움직임 분석", "목표에 맞춘 맞춤 커리큘럼", "집중적인 피드백과 교정"] },
     en: { title: "Private Lessons", alt: "Private ballet instruction at B-BALLET", lead: "Focused one-on-one instruction based on the student's current condition, experience, and individual goals.", audience: "Students seeking individual goals and detailed correction", focus: ["Personal posture and movement assessment", "A curriculum tailored to individual goals", "Focused feedback and correction"] },
   },
   smallgroup: {
-    number: "PROGRAM 08", image: "assets/graded/program-small-group.webp", contain: true,
+    number: "PROGRAM 08", image: "assets/gallery-trio-line.jpg", contain: true,
     ko: { title: "소그룹 레슨", alt: "세 명이 함께하는 비발레 소그룹 레슨", lead: "소수 인원이 함께 배우는 집중도 높은 수업으로, 개인별 피드백과 그룹의 에너지를 함께 경험합니다.", audience: "친구·가족 또는 비슷한 목표의 소수 그룹", focus: ["소수 정원으로 세밀한 지도", "개인별 피드백과 그룹 연습", "목표와 수준에 맞춘 수업 구성"] },
     en: { title: "Small-Group Lessons", alt: "Three students in a B-BALLET small-group lesson", lead: "A focused class for a small number of students, combining individual feedback with the energy of learning together.", audience: "Friends, family, or small groups with similar goals", focus: ["Detailed instruction in a small group", "Individual feedback and group practice", "Training shaped around level and goals"] },
   },
   performance: {
-    number: "PROGRAM 09", image: "assets/graded/program-performance.webp", contain: false,
+    number: "PROGRAM 09", image: "assets/gallery-performance-group.jpg", contain: false,
     ko: { title: "공연·무대 경험", alt: "비발레 공연 출연진", lead: "수업에서 배운 움직임을 작품과 무대로 확장하며, 준비 과정부터 공연의 순간까지 함께 완성합니다.", audience: "작품과 실제 무대 경험을 원하는 수강생", focus: ["작품 연습과 리허설", "무대 동선과 그룹 호흡", "표현력과 공연 경험"] },
     en: { title: "Performance & Stage", alt: "B-BALLET performance and stage experience", lead: "Extend classroom learning into repertoire and performance, from the preparation process through the moment on stage.", audience: "Students interested in repertoire and stage experience", focus: ["Repertoire practice and rehearsal", "Stage patterns and ensemble awareness", "Expression and performance experience"] },
   },
