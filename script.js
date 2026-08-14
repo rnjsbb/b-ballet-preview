@@ -49,8 +49,8 @@ const programDetails = {
     en: { title: "Small-Group Lessons", alt: "Three students in a B-BALLET small-group lesson", lead: "A focused class for a small number of students, combining individual feedback with the energy of learning together.", audience: "Friends, family, or small groups with similar goals", focus: ["Detailed instruction in a small group", "Individual feedback and group practice", "Training shaped around level and goals"] },
   },
   performance: {
-    number: "PROGRAM 09", image: "assets/graded/performance-wide.webp", contain: false,
-    ko: { title: "공연·무대 경험", alt: "비발레 공연과 무대 경험", lead: "수업에서 배운 움직임을 작품과 무대로 확장하며, 준비 과정부터 공연의 순간까지 함께 완성합니다.", audience: "작품과 실제 무대 경험을 원하는 수강생", focus: ["작품 연습과 리허설", "무대 동선과 그룹 호흡", "표현력과 공연 경험"] },
+    number: "PROGRAM 09", image: "assets/graded/program-performance.webp", contain: false,
+    ko: { title: "공연·무대 경험", alt: "비발레 공연 출연진", lead: "수업에서 배운 움직임을 작품과 무대로 확장하며, 준비 과정부터 공연의 순간까지 함께 완성합니다.", audience: "작품과 실제 무대 경험을 원하는 수강생", focus: ["작품 연습과 리허설", "무대 동선과 그룹 호흡", "표현력과 공연 경험"] },
     en: { title: "Performance & Stage", alt: "B-BALLET performance and stage experience", lead: "Extend classroom learning into repertoire and performance, from the preparation process through the moment on stage.", audience: "Students interested in repertoire and stage experience", focus: ["Repertoire practice and rehearsal", "Stage patterns and ensemble awareness", "Expression and performance experience"] },
   },
 };
