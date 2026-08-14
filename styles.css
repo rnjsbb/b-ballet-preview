@@ -1859,9 +1859,12 @@ body.has-scroll-assist .scroll-assist {
 }
 
 .brand-programs .program-grid {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  border-top: 1px solid rgba(116, 88, 95, 0.22);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: min(1200px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+  border-top: 0;
 }
 
 .brand-programs .program-card {
@@ -1880,7 +1883,7 @@ body.has-scroll-assist .scroll-assist {
 }
 
 .brand-programs .program-card:nth-child(n + 5) {
-  border-top: 1px solid rgba(116, 88, 95, 0.22);
+  border-top: 0;
 }
 
 .brand-programs .program-card h3 {
@@ -2485,6 +2488,9 @@ h2 {
   grid-template-columns: minmax(0, 1.06fr) minmax(420px, 0.94fr);
   gap: clamp(42px, 6vw, 94px);
   align-items: stretch;
+  width: min(1200px, 100%);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .story-copy {
@@ -2666,9 +2672,11 @@ h2 {
 }
 
 .brand-programs .section-heading {
+  width: min(820px, 100%);
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  justify-items: center;
 }
 
 .section-summary {
@@ -2683,6 +2691,9 @@ h2 {
 .brand-programs .program-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  width: min(1200px, 100%);
+  margin-right: auto;
+  margin-left: auto;
   border-top: 0;
 }
 
@@ -2690,8 +2701,8 @@ h2 {
 .brand-programs .program-card:nth-child(n + 5) {
   position: relative;
   display: grid;
-  grid-template-rows: 220px 1fr;
-  min-height: 430px;
+  grid-template-rows: 280px 1fr;
+  min-height: 450px;
   padding: 0;
   overflow: hidden;
   border: 0;
@@ -2707,7 +2718,7 @@ h2 {
 
 .program-image {
   position: relative;
-  height: 220px;
+  height: 280px;
   margin: 0;
   overflow: hidden;
   background: #eee8e6;
@@ -2741,6 +2752,25 @@ h2 {
 .program-card:nth-child(6) .program-image img,
 .program-card:nth-child(9) .program-image img {
   object-position: center 64%;
+}
+
+.program-card:nth-child(3) .program-image,
+.program-card:nth-child(5) .program-image,
+.program-card:nth-child(8) .program-image {
+  background: #ebe7e5;
+}
+
+.program-card:nth-child(3) .program-image img,
+.program-card:nth-child(5) .program-image img,
+.program-card:nth-child(8) .program-image img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.program-card:nth-child(3):hover .program-image img,
+.program-card:nth-child(5):hover .program-image img,
+.program-card:nth-child(8):hover .program-image img {
+  transform: scale(1.015);
 }
 
 .program-copy {
@@ -2788,6 +2818,8 @@ h2 {
 
 .faculty > .section-heading {
   margin-bottom: clamp(32px, 4vw, 48px);
+  text-align: center;
+  justify-items: center;
 }
 
 .faculty .section-heading h2 {
@@ -3080,6 +3112,19 @@ h2 {
   background: #fff;
 }
 
+.faq > .section-heading,
+.faq-grid {
+  width: min(1200px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.faq > .section-heading {
+  max-width: 820px;
+  text-align: center;
+  justify-items: center;
+}
+
 .footer {
   min-height: 280px;
   display: grid;
@@ -3166,8 +3211,8 @@ main {
 .brand-programs { order: 3; }
 .trial-invite { order: 4; }
 .silk-divider { order: 5; }
-.brand-gallery { order: 6; }
-.faculty { order: 7; }
+.faculty { order: 6; }
+.brand-gallery { order: 7; }
 .contact { order: 8; }
 .faq { order: 9; }
 

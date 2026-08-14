@@ -115,7 +115,7 @@ const languageTargets = [
   { selector: ".brand-about .section-heading .eyebrow", en: "Our Philosophy" },
   {
     selector: ".brand-about .section-heading h2",
-    en: 'A Philosophical<br /><span class="text-accent">Cultural Movement</span>',
+    en: 'A Philosophical <span class="text-accent">Cultural Movement</span>',
   },
   {
     selector: ".brand-about .story-lead",
@@ -140,7 +140,7 @@ const languageTargets = [
   { selector: ".story-principles div:nth-of-type(4) p", en: "Discover a personal voice through movement." },
   {
     selector: ".brand-statement p",
-    en: "Inspiring education. Professional guidance.<br />Understanding the body. Growing together.",
+    en: "Inspiring education. Professional guidance. Understanding the body. Growing together.",
   },
   {
     selector: ".brand-statement span",
@@ -346,6 +346,8 @@ const languageAttributeTargets = [
   { selector: "img[src='assets/brand-studio-empty.jpg']", attribute: "alt", en: "Sunlit B-BALLET studio" },
   { selector: "img[src='assets/brand-gallery-studio-empty-wide.jpg']", attribute: "alt", en: "Sunlit B-BALLET studio" },
   { selector: "img[src='assets/seongnam-studio-wide.jpg']", attribute: "alt", en: "Spacious B-BALLET Seongnam studio" },
+  { selector: "img[src='assets/seongnam-pointe-detail.webp']", attribute: "alt", en: "Pointe alignment training at B-BALLET" },
+  { selector: "img[src='assets/gallery-trio-line.jpg']", attribute: "alt", en: "Three students in a B-BALLET small-group lesson" },
   { selector: "img[src='assets/brand-gallery-pointe-detail.jpg']", attribute: "alt", en: "Pointe shoes and tutu detail at B-BALLET" },
   { selector: "img[src='assets/brand-hero-performance-wide.jpg']", attribute: "alt", en: "B-BALLET stage performance" },
   { selector: "img[src='assets/brand-gallery-kids.jpg']", attribute: "alt", en: "Children's ballet class at B-BALLET" },
