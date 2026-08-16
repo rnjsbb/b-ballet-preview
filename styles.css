@@ -202,8 +202,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .side-inquiry { position: fixed; right: 0; bottom: 34%; z-index: 40; display: grid; place-items: center; width: 42px; height: 124px; background: var(--pink); color: white; writing-mode: vertical-rl; font-size: 11px; font-weight: 500; letter-spacing: .12em; }
 .footer { padding: 90px 0 38px; background: #171516; color: white; }
 .footer-inner { width: min(var(--content), calc(100% - 80px)); margin: 0 auto; }
-.footer-brand { display: flex; justify-content: space-between; align-items: baseline; gap: 30px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.14); }
-.footer-brand strong { font-family: "Cormorant Garamond", serif; font-size: 50px; font-weight: 500; letter-spacing: .04em; }
+.footer-brand { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.14); }
+.footer-brand img { display: block; width: clamp(210px, 22vw, 310px); height: auto; filter: brightness(0) invert(1); opacity: .94; }
 .footer-brand p { margin: 0; color: rgba(255,255,255,.5); font-size: 13px; }
 .footer-information { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px; padding: 48px 0 65px; }
 .footer-information h2 { margin: 0 0 18px; color: #f59ab5; font-size: 12px; font-weight: 500; letter-spacing: .12em; }
